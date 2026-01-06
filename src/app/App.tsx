@@ -142,11 +142,14 @@ export default function App() {
             >
               <div className="relative rounded-[2rem] overflow-hidden bg-gradient-to-br from-zinc-900 to-black p-1">
                 <div className="rounded-[1.9rem] overflow-hidden bg-black">
-                  <ImageWithFallback
-                    src={chipImage}
-                    alt="HOLO-Chip 1 HPU - Silicon Nitride Core"
-                    className="w-full h-auto"
-                  />
+                  <div className="relative w-full overflow-hidden" style={{ paddingBottom: '95%' }}>
+                    <ImageWithFallback
+                      src={chipImage}
+                      alt="HOLO-Chip 1 HPU - Silicon Nitride Core"
+                      className="absolute inset-0 w-full h-full object-cover"
+                      style={{ objectPosition: 'center 45%', transform: 'scale(1.15)' }}
+                    />
+                  </div>
                   {/* Pulsing Cyan Vein Overlay */}
                   <motion.div
                     animate={{
@@ -328,7 +331,7 @@ export default function App() {
 
           {/* Hologram Application Showcase Grid */}
           <div className="grid md:grid-cols-3 gap-8 lg:gap-10">
-            {/* Application 1: Architectural Blueprint */}
+            {/* Application 1: Design & Engineering */}
             <motion.div
               initial={{ opacity: 0, y: 60 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -344,8 +347,8 @@ export default function App() {
                 {/* Image Container */}
                 <div className="relative h-3/5 rounded-2xl overflow-hidden mb-6">
                   <ImageWithFallback
-                    src="https://images.unsplash.com/photo-1523311680335-ca735f4c6025?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxob2xvZ3JhbSUyMHByb2plY3Rpb24lMjBhcmNoaXRlY3R1cmV8ZW58MXx8fHwxNjc3NzI1ODc1fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-                    alt="Architectural hologram visualization"
+                    src="https://images.unsplash.com/photo-1752253604157-65fb42c30816?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxob2xvZ3JhcGhpYyUyMGludGVyZmFjZSUyMGZ1dHVyaXN0aWN8ZW58MXx8fHwxNzY3NzI3MTY2fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                    alt="Holographic design and engineering interface"
                     className="w-full h-full object-cover opacity-70 group-hover:opacity-90 transition-opacity duration-700"
                   />
                   <motion.div
@@ -378,10 +381,10 @@ export default function App() {
                 {/* Description */}
                 <div className="space-y-3">
                   <h3 className="text-2xl tracking-tight text-white" style={{ fontWeight: 200 }}>
-                    Architecture
+                    Design & Engineering
                   </h3>
                   <p className="text-sm text-white/50 leading-relaxed" style={{ fontWeight: 300 }}>
-                    Complex blueprints rotating in three-dimensional space. Design with unprecedented clarity.
+                    Manipulate CAD models in real-time. Rotate, scale, and refine complex structures with natural gestures.
                   </p>
                 </div>
 
@@ -390,7 +393,7 @@ export default function App() {
               </motion.div>
             </motion.div>
 
-            {/* Application 2: Medical Visualization */}
+            {/* Application 2: Medical Imaging */}
             <motion.div
               initial={{ opacity: 0, y: 60 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -406,8 +409,8 @@ export default function App() {
                 {/* Image Container */}
                 <div className="relative h-3/5 rounded-2xl overflow-hidden mb-6">
                   <ImageWithFallback
-                    src="https://images.unsplash.com/photo-1743767587687-9ebaac2b55e3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwdmlzdWFsaXphdGlvbiUyMDNEfGVufDF8fHx8MTc2NzcyNTg3Nnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-                    alt="Medical hologram visualization"
+                    src="https://images.unsplash.com/photo-1612888077748-00e3a1bd7aad?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHwzRCUyMG1lZGljYWwlMjBzY2FufGVufDF8fHx8MTc2NzcyNzE2Nnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                    alt="3D medical holographic visualization"
                     className="w-full h-full object-cover opacity-70 group-hover:opacity-90 transition-opacity duration-700"
                   />
                   <motion.div
@@ -441,10 +444,10 @@ export default function App() {
                 {/* Description */}
                 <div className="space-y-3">
                   <h3 className="text-2xl tracking-tight text-white" style={{ fontWeight: 200 }}>
-                    Medicine
+                    Medical Imaging
                   </h3>
                   <p className="text-sm text-white/50 leading-relaxed" style={{ fontWeight: 300 }}>
-                    Detailed organ models shimmer with internal light. Diagnostic precision redefined.
+                    Explore CT and MRI scans in volumetric 3D. Examine anatomy from every angle with unprecedented detail.
                   </p>
                 </div>
 
@@ -453,7 +456,7 @@ export default function App() {
               </motion.div>
             </motion.div>
 
-            {/* Application 3: Data Visualization */}
+            {/* Application 3: Data Analytics */}
             <motion.div
               initial={{ opacity: 0, y: 60 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -469,8 +472,8 @@ export default function App() {
                 {/* Image Container */}
                 <div className="relative h-3/5 rounded-2xl overflow-hidden mb-6">
                   <ImageWithFallback
-                    src="https://images.unsplash.com/photo-1765046255479-669cf07a0230?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkYXRhJTIwdmlzdWFsaXphdGlvbiUyMGFic3RyYWN0fGVufDF8fHx8MTc2NzcwMzIxMnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-                    alt="Data hologram visualization"
+                    src="https://images.unsplash.com/photo-1765046255479-669cf07a0230?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkaWdpdGFsJTIwZGF0YSUyMHZpc3VhbGl6YXRpb258ZW58MXx8fHwxNzY3NzE0OTk5fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                    alt="Holographic data analytics visualization"
                     className="w-full h-full object-cover opacity-70 group-hover:opacity-90 transition-opacity duration-700"
                   />
                   <motion.div
@@ -504,10 +507,211 @@ export default function App() {
                 {/* Description */}
                 <div className="space-y-3">
                   <h3 className="text-2xl tracking-tight text-white" style={{ fontWeight: 200 }}>
-                    Data
+                    Data Analytics
                   </h3>
                   <p className="text-sm text-white/50 leading-relaxed" style={{ fontWeight: 300 }}>
-                    Abstract patterns form intricate visualizations. Intelligence made tangible through light.
+                    Transform complex datasets into interactive 3D visualizations. Discover patterns in multidimensional space.
+                  </p>
+                </div>
+
+                {/* Glow effect on hover */}
+                <div className="absolute inset-0 -z-10 rounded-3xl bg-gradient-to-br from-cyan-500/0 to-blue-500/0 group-hover:from-cyan-500/10 group-hover:to-blue-500/5 transition-all duration-700"></div>
+              </motion.div>
+            </motion.div>
+
+            {/* Application 4: Scientific Research */}
+            <motion.div
+              initial={{ opacity: 0, y: 60 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
+              viewport={{ once: true, amount: 0.2 }}
+              className="group relative"
+            >
+              <motion.div
+                whileHover={{ scale: 1.03, y: -10 }}
+                transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+                className="relative aspect-[3/4] rounded-3xl overflow-hidden backdrop-blur-xl bg-gradient-to-br from-white/[0.05] to-white/[0.02] border border-white/10 p-6"
+              >
+                {/* Image Container */}
+                <div className="relative h-3/5 rounded-2xl overflow-hidden mb-6">
+                  <ImageWithFallback
+                    src="https://images.unsplash.com/photo-1670367248901-752d21705db7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHwzRCUyMG1vbGVjdWxlJTIwc3RydWN0dXJlfGVufDF8fHx8MTc2NzcyNzE2OHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                    alt="Molecular structure holographic display"
+                    className="w-full h-full object-cover opacity-70 group-hover:opacity-90 transition-opacity duration-700"
+                  />
+                  <motion.div
+                    animate={{
+                      opacity: [0.2, 0.4, 0.2],
+                    }}
+                    transition={{
+                      duration: 4.2,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                      delay: 0.7
+                    }}
+                    className="absolute inset-0 bg-gradient-to-t from-purple-500/20 to-transparent"
+                  ></motion.div>
+
+                  {/* Orbiting particles effect */}
+                  <motion.div
+                    animate={{
+                      rotate: [0, 360],
+                      opacity: [0.4, 0.7, 0.4],
+                    }}
+                    transition={{
+                      rotate: { duration: 8, repeat: Infinity, ease: "linear" },
+                      opacity: { duration: 3, repeat: Infinity, ease: "easeInOut" }
+                    }}
+                    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-24 border border-purple-400/30 rounded-full"
+                  ></motion.div>
+                </div>
+
+                {/* Description */}
+                <div className="space-y-3">
+                  <h3 className="text-2xl tracking-tight text-white" style={{ fontWeight: 200 }}>
+                    Scientific Research
+                  </h3>
+                  <p className="text-sm text-white/50 leading-relaxed" style={{ fontWeight: 300 }}>
+                    Visualize molecular structures and quantum phenomena. Manipulate atoms and bonds in real-time simulation.
+                  </p>
+                </div>
+
+                {/* Glow effect on hover */}
+                <div className="absolute inset-0 -z-10 rounded-3xl bg-gradient-to-br from-purple-500/0 to-blue-500/0 group-hover:from-purple-500/10 group-hover:to-blue-500/5 transition-all duration-700"></div>
+              </motion.div>
+            </motion.div>
+
+            {/* Application 5: Education & Training */}
+            <motion.div
+              initial={{ opacity: 0, y: 60 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
+              viewport={{ once: true, amount: 0.2 }}
+              className="group relative"
+            >
+              <motion.div
+                whileHover={{ scale: 1.03, y: -10 }}
+                transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+                className="relative aspect-[3/4] rounded-3xl overflow-hidden backdrop-blur-xl bg-gradient-to-br from-white/[0.05] to-white/[0.02] border border-white/10 p-6"
+              >
+                {/* Image Container */}
+                <div className="relative h-3/5 rounded-2xl overflow-hidden mb-6">
+                  <ImageWithFallback
+                    src="https://images.unsplash.com/photo-1756908992154-c8a89f5e517f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmdXR1cmlzdGljJTIwaG9sb2dyYW0lMjB0ZWNobm9sb2d5fGVufDF8fHx8MTc2NzY1Mzc5Nnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                    alt="Holographic education and training interface"
+                    className="w-full h-full object-cover opacity-70 group-hover:opacity-90 transition-opacity duration-700"
+                  />
+                  <motion.div
+                    animate={{
+                      opacity: [0.2, 0.4, 0.2],
+                    }}
+                    transition={{
+                      duration: 4.7,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                      delay: 0.4
+                    }}
+                    className="absolute inset-0 bg-gradient-to-t from-blue-500/20 via-cyan-500/10 to-transparent"
+                  ></motion.div>
+
+                  {/* Ripple effect */}
+                  <motion.div
+                    animate={{
+                      scale: [1, 1.5, 1],
+                      opacity: [0.5, 0, 0.5],
+                    }}
+                    transition={{
+                      duration: 3,
+                      repeat: Infinity,
+                      ease: "easeOut"
+                    }}
+                    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 border-2 border-blue-400/40 rounded-full"
+                  ></motion.div>
+                </div>
+
+                {/* Description */}
+                <div className="space-y-3">
+                  <h3 className="text-2xl tracking-tight text-white" style={{ fontWeight: 200 }}>
+                    Education & Training
+                  </h3>
+                  <p className="text-sm text-white/50 leading-relaxed" style={{ fontWeight: 300 }}>
+                    Interactive learning experiences that transcend traditional boundaries. Step inside knowledge itself.
+                  </p>
+                </div>
+
+                {/* Glow effect on hover */}
+                <div className="absolute inset-0 -z-10 rounded-3xl bg-gradient-to-br from-blue-500/0 to-cyan-500/0 group-hover:from-blue-500/10 group-hover:to-cyan-500/5 transition-all duration-700"></div>
+              </motion.div>
+            </motion.div>
+
+            {/* Application 6: Collaboration */}
+            <motion.div
+              initial={{ opacity: 0, y: 60 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
+              viewport={{ once: true, amount: 0.2 }}
+              className="group relative"
+            >
+              <motion.div
+                whileHover={{ scale: 1.03, y: -10 }}
+                transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+                className="relative aspect-[3/4] rounded-3xl overflow-hidden backdrop-blur-xl bg-gradient-to-br from-white/[0.05] to-white/[0.02] border border-white/10 p-6"
+              >
+                {/* Image Container */}
+                <div className="relative h-3/5 rounded-2xl overflow-hidden mb-6">
+                  <ImageWithFallback
+                    src="https://images.unsplash.com/photo-1525459715390-11a3e77bc887?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx2aXJ0dWFsJTIwcmVhbGl0eSUyMGludGVyZmFjZXxlbnwxfHx8fDE3Njc3MjcxNjh8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                    alt="Holographic collaboration interface"
+                    className="w-full h-full object-cover opacity-70 group-hover:opacity-90 transition-opacity duration-700"
+                  />
+                  <motion.div
+                    animate={{
+                      opacity: [0.2, 0.4, 0.2],
+                    }}
+                    transition={{
+                      duration: 5.2,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                      delay: 0.9
+                    }}
+                    className="absolute inset-0 bg-gradient-to-t from-cyan-500/20 to-transparent"
+                  ></motion.div>
+
+                  {/* Multiple pulsing points */}
+                  <motion.div
+                    animate={{
+                      opacity: [0.3, 0.7, 0.3],
+                      scale: [1, 1.2, 1],
+                    }}
+                    transition={{
+                      duration: 2.5,
+                      repeat: Infinity,
+                      ease: "easeInOut"
+                    }}
+                    className="absolute top-1/3 left-1/3 w-8 h-8 bg-cyan-400/40 rounded-full blur-md"
+                  ></motion.div>
+                  <motion.div
+                    animate={{
+                      opacity: [0.3, 0.7, 0.3],
+                      scale: [1, 1.2, 1],
+                    }}
+                    transition={{
+                      duration: 2.5,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                      delay: 0.8
+                    }}
+                    className="absolute bottom-1/3 right-1/3 w-8 h-8 bg-blue-400/40 rounded-full blur-md"
+                  ></motion.div>
+                </div>
+
+                {/* Description */}
+                <div className="space-y-3">
+                  <h3 className="text-2xl tracking-tight text-white" style={{ fontWeight: 200 }}>
+                    Collaboration
+                  </h3>
+                  <p className="text-sm text-white/50 leading-relaxed" style={{ fontWeight: 300 }}>
+                    Share holographic workspaces across distances. Collaborate as if you're in the same room, anywhere.
                   </p>
                 </div>
 
