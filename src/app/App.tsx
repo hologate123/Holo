@@ -1,7 +1,6 @@
 import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'motion/react';
 import { ImageWithFallback } from './components/figma/ImageWithFallback';
-import chipImage from 'figma:asset/cc6da6f9629a7aa8e3deb01c6060b815ada9d34d.png';
 
 export default function App() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -19,7 +18,7 @@ export default function App() {
   const hologramOpacity = useTransform(scrollYProgress, [0.4, 0.55], [0, 1]);
 
   return (
-    <div ref={containerRef} className="min-h-screen bg-black text-white overflow-x-hidden">
+    <div ref={containerRef} className="relative min-h-screen bg-black text-white overflow-x-hidden">
       {/* 1. Hero Section */}
       <motion.section
         style={{ y: heroY, opacity: heroOpacity }}
@@ -144,7 +143,7 @@ export default function App() {
                 <div className="rounded-[1.9rem] overflow-hidden bg-black">
                   <div className="relative w-full overflow-hidden" style={{ paddingBottom: '95%' }}>
                     <ImageWithFallback
-                      src={chipImage}
+                      src="https://images.unsplash.com/photo-1756908992154-c8a89f5e517f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmdXR1cmlzdGljJTIwaG9sb2dyYW0lMjB0ZWNobm9sb2d5fGVufDF8fHx8MTc2NzY1Mzc5Nnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
                       alt="HOLO-Chip 1 HPU - Silicon Nitride Core"
                       className="absolute inset-0 w-full h-full object-cover"
                       style={{ objectPosition: 'center 45%', transform: 'scale(1.15)' }}
