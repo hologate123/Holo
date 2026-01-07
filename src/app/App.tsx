@@ -18,7 +18,7 @@ export default function App() {
   const hologramOpacity = useTransform(scrollYProgress, [0.4, 0.55], [0, 1]);
 
   return (
-    <div ref={containerRef} className="relative min-h-screen bg-black text-white overflow-x-hidden">
+    <div ref={containerRef} style={{ position: 'relative' }} className="relative min-h-screen bg-black text-white overflow-x-hidden">
       {/* 1. Hero Section */}
       <motion.section
         style={{ y: heroY, opacity: heroOpacity }}
